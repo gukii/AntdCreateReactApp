@@ -1,11 +1,15 @@
-This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
+
 
 Got Antd installed, following Ant Design's own guide to setup Create React App (CRA) with Antd:
 - English: https://ant.design/docs/react/use-with-create-react-app
 - 中文：https://ant.design/docs/react/use-with-create-react-app-cn
 
+This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
+
 Removed the remaining import of the CSS library, this is handled by babel-plugin-import now.
+```js
 /* @import '~antd/dist/antd.css'; */
+```
 
 ## For mobile developers:
 
