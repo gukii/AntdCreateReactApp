@@ -16,7 +16,10 @@ Removed the remaining import of the CSS library, this is handled by babel-plugin
 If u develop for mobile u might want to replace the antd library with antd-mobile:
 - yarn remove antd
 - yarn add antd-mobile
-- Edit 'config-overrides.js' and change libaryName: 'antd' to 'antd-mobile'
+- Edit 'config-overrides.js' and change libaryName: 'antd' to 'antd-mobile':
+```js
+       config = injectBabelPlugin(['import', { libraryName: 'antd-mobile', style: true }], config);  
+```
 - When importing react components, make sure you ll import from 'antd-mobile'.
 
 ## Install and run:
