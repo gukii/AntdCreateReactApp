@@ -1,20 +1,41 @@
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
-Got Antd installed, following Ant Design's own guide to setup [Create React App (CRA) with Antd](https://ant.design/docs/react/use-with-create-react-app).
+Got Antd installed, following Ant Design's own guide to setup Create React App (CRA) with Antd:
+- English: https://ant.design/docs/react/use-with-create-react-app
+- 中文：https://ant.design/docs/react/use-with-create-react-app-cn
 
 Removed the remaining import of the CSS library, this is handled by babel-plugin-import now.
 /* @import '~antd/dist/antd.css'; */
 
 ## For mobile developers:
-U might want to replace the antd library with antd-mobile, if you develop for mobile:
-yarn remove antd
-yarn add antd-mobile
 
-Edit 'config-overrides.js' and change libaryName: 'antd' to 'antd-mobile'
+If u develop for mobile u might want to replace the antd library with antd-mobile:
+- yarn remove antd
+- yarn add antd-mobile
+- Edit 'config-overrides.js' and change libaryName: 'antd' to 'antd-mobile'
+- When importing react components, make sure you ll import from 'antd-mobile'.
 
-When importing components, make sure you ll import from 'ant-mobile'.
+## Install and run:
 
-Current version of Antd is: 3.2
+```bash
+$ npm install
+$ npm start
+```
+
+or:
+
+```bash
+$ yarn
+$ yarn start
+```
+
+## Libraries from package.json:
+
+- [antd](http://github.com/ant-design/ant-design/)
+- [babel-plugin-import](http://github.com/ant-design/babel-plugin-import/)
+- [create-react-app](https://github.com/facebookincubator/create-react-app)
+- [react-app-rewired](https://github.com/timarney/react-app-rewired)
+- [less-loader](https://github.com/webpack/less-loader)
 
 
 
