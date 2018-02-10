@@ -11,16 +11,25 @@ Removed the remaining import of the CSS library, this is handled by babel-plugin
 /* @import '~antd/dist/antd.css'; */
 ```
 
-## For mobile developers:
+
+## For desktop developers:
+
+### use Antd instead of Antd-Mobile
+there s a repo for that:
+https://github.com/gukii/AntdMobileCreateReactApp.git
+
+### or make changes to this repo:
 
 If u develop for mobile u might want to replace the antd library with antd-mobile:
-- yarn remove antd
-- yarn add antd-mobile
+- yarn remove antd-mobile
+- yarn add antd
 - Edit 'config-overrides.js' and change libaryName: 'antd' to 'antd-mobile':
 ```js
-       config = injectBabelPlugin(['import', { libraryName: 'antd-mobile', style: true }], config);  
+       config = injectBabelPlugin(['import', { libraryName: 'ant', style: true }], config);  // change importing css to less
+ 
 ```
-- When importing react components, make sure you ll import from 'antd-mobile'.
+- When importing react components, make sure you ll import from 'antd', instead of 'antd-mobile.
+
 
 ## Install and run:
 
@@ -35,6 +44,14 @@ or:
 $ yarn
 $ yarn start
 ```
+
+App.js imports a button component from 'antd' and renders it on screen.
+
+.config-overrides.js allows switching between CSS and LESS.
+The LESS version shows how to override the color of the Button.
+
+CSS/LESS and React components get imported selectively, only the ones used will become part of the final bundle.
+
 
 ## Libraries from package.json:
 
